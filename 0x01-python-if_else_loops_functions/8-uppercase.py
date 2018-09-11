@@ -1,11 +1,7 @@
 def uppercase(str):
-    array = []
-    count = 0
     for i in str:
-        if i >= 'a' and i <= 'z':
-            array.append(chr(ord(i) - 32))
-        else:
-            array.append(i)
-        print(array[count], end='')
-        count += 1
+        convert = ord(i)
+        if convert >= 97 and convert <= 122:
+            convert -= 32
+        print("{}".format(chr(convert)), end='')
     print('')
