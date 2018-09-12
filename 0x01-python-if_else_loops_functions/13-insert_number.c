@@ -20,29 +20,36 @@ listint_t *insert_node(listint_t **head, int number)
 	if (!new || !head)
 		return (NULL);
 	new->n = number;
+	/* if the value of head is equal to NULL then we place new before it */
 	if (!*head)
 	{
 		new->next = *head;
 		*head = new;
 		return (new);
 	}
+	/* while head has value do this loop*/
+	/* i initially did head->next but had problems with small lists*/
+	/* I also tried head->next->n which caused seg faults */
 	while (temp)
 	{
-		/* for when the next number is smaller than numb */
+		/* for when the number is bigger than the head's n value, */
+		/* but if it is less than the next head n value- we insert inbetween*/
 		if ((temp->n <= number) && (temp->next && (temp->next->n >= number)))
 		{
 			new->next = temp->next;
 			temp->next = new;
 			return (new);
 		}
-		/* this is when you add new node to the end */
+		/* if number is greater than the head's n value and */
+		/* the next node is a NULL then do this */
 		else if (temp->n <= number && !(temp->next))
 		{
 			new->next = NULL;
 			temp->next = new;
 			return (new);
 		}
-		/* when the number is small and first */
+		/* when the number is smaller than heads value */
+		/* then we insert it before head and do stuff */
 		else if (temp->n > number)
 		{
 			new->next = temp;
