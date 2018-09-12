@@ -29,14 +29,14 @@ listint_t *insert_node(listint_t **head, int number)
 	while (temp)
 	{
 		/* for when the next number is smaller than numb */
-		if ((temp->n <= number) && temp->next && (temp->next->n >= number))
+		if ((temp->n <= number) && (temp->next && (temp->next->n >= number)))
 		{
 			new->next = temp->next;
 			temp->next = new;
 			return (new);
 		}
 		/* this is when you add new node to the end */
-		else if (temp->n >= number && !temp->next)
+		else if (temp->n <= number && !(temp->next))
 		{
 			new->next = NULL;
 			temp->next = new;
