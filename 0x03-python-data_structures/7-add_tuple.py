@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    cast = []
-    cast.append(int(tuple_a[0]) + int(tuple_b[0]))
-    cast.append(int(tuple_b[1]) + int(tuple_b[1]))
-    return tuple(cast)
+    castedA = list(tuple_a)
+    castedB = list(tuple_b)
+    castedA.append(0) if len(castedA) is 1 else castedA.extend([0, 0])
+    castedB.append(0) if len(castedB) is 1 else castedB.extend([0, 0])
+    return (castedA[0] + castedB[0], castedA[1] + castedB[1])
