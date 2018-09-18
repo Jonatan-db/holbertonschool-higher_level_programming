@@ -14,7 +14,7 @@ int is_palindrome(listint_t **head)
 	int array[1024];
 
 	if (!head || !(*head))
-		return (1);
+		return (0);
 	if ((*head)->next == NULL)
 		return (1);
 	while (*head)
