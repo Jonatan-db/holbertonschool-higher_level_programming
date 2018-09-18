@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 {
 	short i, j;
 	short count = 0;
-	int array[9000];
+	int array[5000];
 
 	if (!head || !(*head))
 		return (1);
