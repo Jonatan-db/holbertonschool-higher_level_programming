@@ -17,3 +17,12 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
 roman_number = "DCCVII"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "MMMCMXCIX"
+print("{} = {} should be 3999".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "III"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "MCIX"
+print("{} = {} should be 1109".format(roman_number, roman_to_int(roman_number)))

@@ -20,20 +20,19 @@ def helper(i):
 
 def roman_to_int(roman_string):
     count = 0
-    past = 0
+    future = 0
     number = 0
 
     if type(roman_string) is not str or roman_string is None:
         return 0
-    for i in roman_string:
-        number = helper(i)
-        if number is 0:
-            return 0
-        if count is 0:
+    if len(roman_string) is 1:
+        return helper(roman_string[0])
+    for i in range(0, len(roman_string) - 1):
+        number = helper(roman_string[i])
+        future = helper(roman_string[i + 1])
+        if number >= future:
             count += number
-        elif past < number:
+        elif number < future:
             count -= number
-        elif past >= number:
-            count += number
-        past = number
+    count += future
     return abs(count)
