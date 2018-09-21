@@ -35,4 +35,4 @@ def roman_to_int(roman_string):
         elif number < future:
             count -= number
     count += future
-    return abs(count)
+    return count
