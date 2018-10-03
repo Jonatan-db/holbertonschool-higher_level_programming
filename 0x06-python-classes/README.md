@@ -1,6 +1,5 @@
 
 
-
 What is OOP
 4 principles of OOP which are encapsulation, abstraction, inheritance, and polymorphism.
 
