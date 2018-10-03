@@ -28,7 +28,7 @@ class Square:
                 type(value) is not tuple or\
                 type(value[0]) is not int or type(value[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value 
+        self.__position = value
 
     def my_print(self):
         if self.size is 0:
