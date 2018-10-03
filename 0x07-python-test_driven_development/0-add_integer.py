@@ -1,44 +1,21 @@
 #!/usr/bin/python3
+""" this is my add_integer module """
+
+
 def add_integer(a, b=98):
+    """Function that returns the addition of a + b
+
+    Args:
+        a: should be an int. if not throw error
+        b: second int. if not throw error. default val is 98.
+
+    Returns:
+        The addition of a + b or a raised TypeError
     """
-    A function that adds two integers, b is default 98
-    a and b  should be an int, if not throw error.
-    b has a default of 98
-    """
-
-    def __init__(self, a, b):
-        """
-        sets the values of the attributes by calling on the setter functions
-        """
-        self.a = a
-        self.b = b
-
-    @property
-    def a(self):
-        """ a getter function for a """
-        return self.__a
-    
-    @a.setter
-    def a(self, value):
-        """ a setter function for a """
-        if type(a) is int or type(a) is float:     
-            self.__a = value
-        else:
-            raise TypeError("a must be an integer")
-
-    @property
-    def b(self):
-        """ a getter for b """
-        return self.__b
-
-    @b.setter
-    def b(self, value):
-        """ a setter for b """
+    if type(a) is int or type(a) is float:
         if type(b) is int or type(b) is float:
-            self.__b = value
+            return int(a + b)
         else:
             raise TypeError("b must be an integer")
-   
-    def __repr__(self):
-        """ return the addition """
-        return self.__a + self.__b
+    else:
+        raise TypeError("a must be an integer")
