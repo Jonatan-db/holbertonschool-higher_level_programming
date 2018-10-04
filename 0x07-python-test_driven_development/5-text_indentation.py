@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ function that prints a text with new lines """
 
+
 def text_indentation(text):
     """ After each . ? and : print 2 new lines
 
