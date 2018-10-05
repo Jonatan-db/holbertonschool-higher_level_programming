@@ -25,6 +25,13 @@ op
 >>> text_indentation("")
 <BLANKLINE>
 
+>>> text_indentation("poop:      ?    ")
+poop:
+<BLANKLINE>
+?
+<BLANKLINE>
+
+
 =========== ERRORS ===========
 
 >>> text_indentation(3)
