@@ -1,0 +1,93 @@
+""" TEST MODULE FOR 101 LAZY MULTIPLY """
+
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+array([[ 7, 10], [15, 22]])
+
+>>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+[[13 16]]
+
+======================
+ERRORS
+======================
+
+
+""" when not a list checks """
+
+>>> lazy_matrix_mul("poop", [4])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list
+
+>>> lazy_matrix_mul([[0]], "sponge")
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list
+
+
+""" when not a list of list checks """
+
+>>> lazy_matrix_mul([0], [[0]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list of lists
+
+>>> lazy_matrix_mul([[0]], [0])
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list of lists
+
+
+""" empty list checks """
+
+>>> lazy_matrix_mul([[]], [[0]])       
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+>>> lazy_matrix_mul([], [[0]])       
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+>>> lazy_matrix_mul([[0]], [[]])       
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+>>> lazy_matrix_mul([[0]], [])       
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+
+""" not int or float values check """
+
+>>> lazy_matrix_mul([["turtle", 2]], [[1, 2]])
+Traceback (most recent call last):
+...
+TypeError: m_a should contain only integers or floats
+
+>>> lazy_matrix_mul([[1, 2]], [[1, "i like"]])
+Traceback (most recent call last):
+...
+TypeError: m_b should contain only integers or floats
+
+
+""" if rows are not the same size """
+
+>>> lazy_matrix_mul([[1, 2], [3, 4, 5]], [[1, 2], [3, 4]])           
+Traceback (most recent call last):
+...
+TypeError: each row of m_a must should be of the same size
+
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [3, 4]])           
+Traceback (most recent call last):
+...
+TypeError: each row of m_b must should be of the same size
+
+
+""" if cant be multiplied. what??? """
+
+# raise a value error but what???? will this ever happen?
