@@ -19,3 +19,7 @@ text_indentation("hello:      ?    ")
 print()
 
 text_indentation("hi...")
+
+print()
+
+text_indentation("             test     ")
