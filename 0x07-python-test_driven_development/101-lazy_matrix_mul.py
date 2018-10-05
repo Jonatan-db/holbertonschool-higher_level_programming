@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ use numpy to multiply two matrices the lazy way"""
+import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
@@ -11,5 +12,4 @@ def lazy_matrix_mul(m_a, m_b):
 
         Return: the product of m_a and m_b
         """
-        import numpy
-        return numpy.matmul(m_a, m_b)
+        return np.matmul(m_a, m_b)
