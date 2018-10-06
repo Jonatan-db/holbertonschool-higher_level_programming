@@ -10,20 +10,23 @@ def text_indentation(text):
 
     Return: none, just print
     """
-    flag = 0
+    last = " "
+    string = ""
     if text is "":
-        print()
+        print(string, end='')
     if type(text) is not str:
         raise TypeError("text must be a string")
     for i in text:
-        if i is ' ':
-            flag = 1
+        if i is last and i is ' ':
+            last = i
+            continue
+        if (last is '.' or last is '?' or last is ':') and i is ' ':
+            last = i
+            continue
         if i is '.' or i is '?' or i is ':':
-            flag = 1
-            print(i)
-            print()
-        elif flag is 1 and i is ' ':
-            pass
+            string += i + "\n" + "\n"
+            last = i
         else:
-            print(i, end='')
-            flag = 0
+            string += i
+            last = i
+    print(string.rstrip(' '), end="")

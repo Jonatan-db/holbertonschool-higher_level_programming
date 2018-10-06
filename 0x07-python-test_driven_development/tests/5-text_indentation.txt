@@ -22,14 +22,33 @@ po.
 <BLANKLINE>
 op
 
->>> text_indentation("")
-<BLANKLINE>
+>>> text_indentation("") is None
+True
 
 >>> text_indentation("poop:      ?    ")
 poop:
 <BLANKLINE>
 ?
 <BLANKLINE>
+
+
+>>> text_indentation("hello:      ?    ")
+hello:
+<BLANKLINE>
+?
+<BLANKLINE>
+
+
+>>> text_indentation("hi...")
+hi.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> text_indentation("             test     ")
+test
 
 
 =========== ERRORS ===========
