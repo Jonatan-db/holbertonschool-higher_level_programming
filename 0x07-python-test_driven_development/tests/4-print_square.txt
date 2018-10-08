@@ -9,8 +9,7 @@ TEST CASES FOR PRINTING A SQUARE
 >>> print_square(1)
 #
 
->>> print_square(0) is None
-True
+>>> print_square(0)
 
 
 """ ERRORS """
