@@ -20,6 +20,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([0, 1, 2, 3]), 3)
         self.assertEqual(max_integer([-5, -3, 0, 3, 5]), 5)
         self.assertEqual(max_integer([69, 6, 9]), 69)
+        self.assertEqual(max_integer([69, 99, 9]), 99)
+        self.assertEqual(max_integer([69]), 69)
 
     def test_empty(self):
         self.assertEqual(max_integer([]), None)
