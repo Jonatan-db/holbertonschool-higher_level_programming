@@ -42,10 +42,10 @@ class Rectangle:
 
     def area(self):
         """ calculates the area of this rekt """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """ calculates the perimeter of this rect """
-        if self.__width is 0 or self.__height is 0:
+        if self.width is 0 or self.height is 0:
             return 0
-        return (self.__width) * 2 + (self.__height * 2)
+        return (self.width * 2) + (self.height * 2)
