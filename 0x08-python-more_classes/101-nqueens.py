@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-# N queens puzzle
-
 
 import sys
+if argc is 1:
+    print("Usage: nqueens N")
+    exit(1)
 if type(argv[1]) is not int:
     print("N must be a number")
     exit(1)
