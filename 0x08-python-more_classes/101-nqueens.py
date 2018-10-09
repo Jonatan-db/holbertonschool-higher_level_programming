@@ -3,7 +3,7 @@
 
 
 import sys
-if type((argv[1]) is not int:
+if type(argv[1]) is not int:
     print("N must be a number")
     exit(1)
 if sys.argv[1] < 4:
