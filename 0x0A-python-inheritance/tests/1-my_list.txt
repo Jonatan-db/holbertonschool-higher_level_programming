@@ -44,6 +44,15 @@ Traceback (most recent call last):
 ...
 TypeError: print_sorted() missing 1 required positional argument: 'self'
 
+>>> types = []
+>>> types.append('poo')
+>>> types.append(2)
+>>> types.append('who')
+>>> my_list(types)
+Traceback (most recent call last):
+...
+TypeError: unorderable types: int() < str()
+
 
 >>> poop = [1, 2]
 >>> poop.append(3)
@@ -65,3 +74,33 @@ TypeError: print_sorted() missing 1 required positional argument: 'self'
 
 >>> my_list(poop)
 [-4, -2, 1, 2, 3]
+
+
+>>> poop = []
+>>> poop.append(2)
+>>> poop.append(3)
+>>> poop.append(1)
+>>> my_list(poop)
+[1, 2, 3]
+
+>>> poop.append(-2)
+>>> poop.append(-4)
+>>> my_list(poop)
+[-4, -2, 1, 2, 3]
+
+>>> poopy = []
+>>> poopy.append(-1)
+>>> poopy.append(-2)
+>>> poopy.append(-3)
+>>> my_list(poopy)
+[-3, -2, -1]
+
+
+>>> poopy = []
+>>> poopy.append("a")
+>>> poopy.append("b")
+>>> poopy.append("c")
+>>> my_list(poopy)
+['a', 'b', 'c']
+
+
