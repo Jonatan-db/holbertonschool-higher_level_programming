@@ -4,4 +4,4 @@
 
 def lookup(obj):
     """ func that returns a list of stuff """
-    return [dir(obj)]
+    return dir(obj)
