@@ -11,9 +11,8 @@ loaded = __import__('8-load_from_json_file').load_from_json_file
 
 try:
     listo = loaded("add_item.json")
-    listo.extend(argv[1:])
-    saved(listo, "add_item.json")
 except:
     listo = []
-    listo.extend(argv[1:])
-    saved(listo, "add_item.json")
+    
+listo.extend(argv[1:])
+saved(listo, "add_item.json")
