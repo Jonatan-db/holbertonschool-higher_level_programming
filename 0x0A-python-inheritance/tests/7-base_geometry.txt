@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+
+>>> test = __import__('7-base_geometry').BaseGeometry
+
+
+>>> test.integer_validator("name", 1)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+>>> test.integer_validator("a3aw3", "1")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+>>> test.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+
+>>> test.integer_validator("value", "1")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> test.area(1)
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+
+>>> test.area()
+Traceback (most recent call last):
+...
+TypeError: area() missing 1 required positional argument: 'self'
