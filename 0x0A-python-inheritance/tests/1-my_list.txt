@@ -97,6 +97,6 @@ True
 >>> issubclass(MyList, list)
 True
 
->>> s = __import__('1-my_list').__doc__
->>> len(s) > 1
+>>> length = __import__('1-my_list').__doc__
+>>> len(length) >= 1
 True
