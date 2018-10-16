@@ -102,6 +102,11 @@ True
 >>> '__str__' in dir(MyList)
 True
 
+>>> '__init__' in dir(MyList)
+True
+
+
+
 >>> test2 = MyList()
 >>> test2.append(1)
 >>> test2.append(3)
