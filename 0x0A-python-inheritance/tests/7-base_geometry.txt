@@ -52,6 +52,12 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("myint", 12) 
 
+>>> bg.integer_validator("width", 89)
+
+>>> bg.integervalidator("myint", 12)
+Traceback (most recent call last):
+...
+AttributeError: 'BaseGeometry' object has no attribute 'integervalidator'
 
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
