@@ -99,6 +99,8 @@ TypeError: print_sorted() takes 1 positional argument but 3 were given
 >>> issubclass(MyList, list)
 True
 
+>>> '__str__' in dir(MyList)
+True
 
 >>> test2 = MyList()
 >>> test2.append(1)
