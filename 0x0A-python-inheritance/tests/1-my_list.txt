@@ -84,18 +84,6 @@ TypeError: unorderable types: int() < str()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 >>> type(MyList())
 <class '1-my_list.MyList'>
 
@@ -106,3 +94,9 @@ TypeError: unorderable types: int() < str()
 >>> 'print_sorted' in dir(MyList)
 True
 
+>>> issubclass(MyList, list)
+True
+
+>>> s = __import__('1-my_list').__doc__
+>>> len(s) > 1
+True
