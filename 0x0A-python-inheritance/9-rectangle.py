@@ -21,4 +21,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """ returns string to the casual and not the developer """
-        return "[Rectangle] %d/%d" % (self.__width, self.__height)
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
