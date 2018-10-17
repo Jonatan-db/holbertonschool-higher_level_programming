@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" cant import anything. sad """
+""" stuff """
 
 
 def class_to_json(obj):
