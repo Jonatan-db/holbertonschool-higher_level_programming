@@ -1,4 +1,4 @@
-#!/bin/bash/python3
+#!/usr/bin/python3
 """ a function that creates an object form a json file """
 
 
