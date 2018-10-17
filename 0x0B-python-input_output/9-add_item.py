@@ -13,6 +13,6 @@ try:
     listo = loaded("add_item.json")
 except:
     listo = []
-    
+
 listo.extend(argv[1:])
 saved(listo, "add_item.json")
