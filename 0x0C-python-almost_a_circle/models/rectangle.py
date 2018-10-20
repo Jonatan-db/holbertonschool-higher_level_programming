@@ -106,7 +106,7 @@ class Rectangle(Base):
                     self.x = value
                 elif index is 4:
                     self.y = value
-                elif index >= 6:
+                elif index >= 5:
                     raise Exception("Too many arguments")
 
             """ This wont work for anything other than 5 args
@@ -131,3 +131,13 @@ class Rectangle(Base):
                     self.x = kwargs["x"]
                 elif key is "y":
                     self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """ returns the dict representation of a rect """
+        temp = {}
+        temp['id'] = self.id
+        temp['width'] = self.width
+        temp['height'] = self.height
+        temp['x'] = self.x
+        temp['y'] = self.y
+        return temp

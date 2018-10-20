@@ -9,3 +9,15 @@ if __name__ == "__main__":
 
     r2 = Rectangle(5, 5, 1)
     print(r2)
+
+    r2 = Rectangle(5, 5, 1)
+    print(r2)
+
+    r2 = Rectangle(5, 5, 1)
+    print(r2)
+
+    r2 = Rectangle(5, 5, 1)
+    print(r2)
+
+    r2 = Rectangle(5, 5, 1)
+    print(r2)
