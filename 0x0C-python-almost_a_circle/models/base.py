@@ -20,6 +20,8 @@ class Base():
     @staticmethod
     def to_json_string(list_dictionaries):
         """ returns JSON of a dictionary """
+        if list_dictionaries is None or len(list_dictionaries) is 0:
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -39,6 +41,8 @@ class Base():
     @staticmethod
     def from_json_string(json_string):
         """ returns the list of a json string """
+        if json_string is None or len(json_string) is 0:
+            return []
         return json.loads(json_string)
 
     @classmethod
@@ -56,8 +60,28 @@ class Base():
     def load_from_file(cls):
         """ returns a list of instances """
         temp = []
-        with open("{}.json".format(cls.__name__), "r", encoding='utf-8') as f:
-            temp = cls.from_json_string(f.read())
+        try:
+            with open("{}.json".format(
+                    cls.__name__), "r", encoding='utf-8') as f:
+                temp = cls.from_json_string(f.read())
+        except:
+            return []
         for i in range(len(temp)):
             temp[i] = cls.create(**temp[i])
         return temp
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ lol i didnt do dis """
+        pass
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ lol hehehe didnt do.
+        I would probably use pickle for this though """
+        pass
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ i got too much other stuff to do. """
+        pass
