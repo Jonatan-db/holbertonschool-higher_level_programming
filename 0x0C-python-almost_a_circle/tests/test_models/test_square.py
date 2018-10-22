@@ -78,7 +78,7 @@ class Test_Square(unittest.TestCase):
     def test_display(self):
         """ wtf do i do for this method """
         sys.stdout = StringIO()
-        test1 = Rectangle(2, 2, 2, 2)
+        test1 = Square(2, 2, 2)
         test1.display()
         self.assertEqual("\n\n  ##\n  ##\n", sys.stdout.getvalue())
         sys.stdout = sys.__stdout__
@@ -86,7 +86,7 @@ class Test_Square(unittest.TestCase):
     def test_display2(self):
         """ wtf do i do for this method """
         sys.stdout = StringIO()
-        test1 = Rectangle(1, 1, 1, 1)
+        test1 = Square(1, 1, 1)
         test1.display()
         self.assertEqual("\n #\n", sys.stdout.getvalue())
         sys.stdout = sys.__stdout__
