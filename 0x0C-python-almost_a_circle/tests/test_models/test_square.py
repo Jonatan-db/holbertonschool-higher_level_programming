@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" unittest for models/SQUARE.py 
+""" unittest for models/SQUARE.py
 I AM LITERALLY COPY PASTING THIS FROM RECTANGLES
 AND JUST CHANGING ALL 5 ARGUMENTS TO JUST 4
 AND CHANGING ALL RECT TO SUQRES...
