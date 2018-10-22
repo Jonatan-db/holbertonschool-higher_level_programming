@@ -8,6 +8,7 @@ import json
 from io import StringIO
 import sys
 
+
 class Test_Rectangle(unittest.TestCase):
 
     def setUp(self):

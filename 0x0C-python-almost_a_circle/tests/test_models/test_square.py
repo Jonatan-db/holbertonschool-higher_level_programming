@@ -13,6 +13,7 @@ import json
 import sys
 from io import StringIO
 
+
 class Test_Square(unittest.TestCase):
 
     def setUp(self):
