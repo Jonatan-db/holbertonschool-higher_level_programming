@@ -12,11 +12,13 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """ overwrites the str """
         return("[{}] ({}) {}/{} - {}".format(
             type(self).__name__, self.id, self.x, self.y, self.width))
 
     @property
     def size(self):
+        """ the getter for size """
         return self.width
 
     @size.setter
@@ -31,6 +33,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ the update method """
         if len(args):
             for index, value in enumerate(args):
                 if index is 0:

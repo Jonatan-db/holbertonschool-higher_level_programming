@@ -32,6 +32,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ getter width """
         return self.__width
 
     @width.setter
@@ -43,6 +44,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ getter height """
         return self.__height
 
     @height.setter
@@ -54,6 +56,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ getter for x """
         return self.__x
 
     @x.setter
@@ -65,6 +68,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ getter for y """
         return self.__y
 
     @y.setter
@@ -75,9 +79,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ calcualtes the area """
         return self.width * self.height
 
     def display(self):
+        """ shows a display of #s """
         for i in range(self.y):
             print()
         for i in range(self.height):
@@ -89,11 +95,13 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """ overwrites the str """
         return("[{}] ({}) {}/{} - {}/{}".format(
             str(self.__class__.__name__), self.id, self.x,
             self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
+        """ the update function """
         if args is not None and len(args):
             for index, value in enumerate(args):
                 if index is 0:
