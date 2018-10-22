@@ -10,7 +10,8 @@ from models.rectangle import Rectangle
 from models.square import Square
 import unittest
 import json
-
+import sys
+from io import StringIO
 
 class Test_Square(unittest.TestCase):
 
@@ -75,7 +76,19 @@ class Test_Square(unittest.TestCase):
 
     def test_display(self):
         """ wtf do i do for this method """
-        pass
+        sys.stdout = StringIO()
+        test1 = Rectangle(2, 2, 2, 2)
+        test1.display()
+        self.assertEqual("\n\n  ##\n  ##\n", sys.stdout.getvalue())
+        sys.stdout = sys.__stdout__
+
+    def test_display2(self):
+        """ wtf do i do for this method """
+        sys.stdout = StringIO()
+        test1 = Rectangle(1, 1, 1, 1)
+        test1.display()
+        self.assertEqual("\n #\n", sys.stdout.getvalue())
+        sys.stdout = sys.__stdout__
 
     def test_string(self):
         """ tests the __str__ """

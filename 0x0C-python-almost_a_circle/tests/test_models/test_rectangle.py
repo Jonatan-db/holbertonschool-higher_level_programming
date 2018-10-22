@@ -5,7 +5,8 @@ from models.base import Base
 from models.rectangle import Rectangle
 import unittest
 import json
-
+from io import StringIO
+import sys
 
 class Test_Rectangle(unittest.TestCase):
 
@@ -70,7 +71,19 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_display(self):
         """ wtf do i do for this method """
-        pass
+        sys.stdout = StringIO()
+        test1 = Rectangle(2, 2, 2, 2)
+        test1.display()
+        self.assertEqual("\n\n  ##\n  ##\n", sys.stdout.getvalue())
+        sys.stdout = sys.__stdout__
+
+    def test_display2(self):
+        """ wtf do i do for this method """
+        sys.stdout = StringIO()
+        test1 = Rectangle(1, 1, 1, 1)
+        test1.display()
+        self.assertEqual("\n #\n", sys.stdout.getvalue())
+        sys.stdout = sys.__stdout__
 
     def test_string(self):
         """ tests the __str__ """
