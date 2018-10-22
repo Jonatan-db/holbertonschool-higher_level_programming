@@ -39,7 +39,7 @@ class Square(Rectangle):
                 if index is 0:
                     self.id = value
                 elif index is 1:
-                    self.width = value
+                    self.size = value
                 elif index is 2:
                     self.x = value
                 elif index is 3:
@@ -48,13 +48,13 @@ class Square(Rectangle):
                     raise Exception("WTF TOO MANY")
         else:
             for key in kwargs:
-                if key is "id":
+                if key == "id":
                     self.id = kwargs["id"]
-                elif key is "size":
-                    self.width = kwargs["size"]
-                elif key is "x":
+                elif key == "size":
+                    self.size = kwargs["size"]
+                elif key == "x":
                     self.x = kwargs["x"]
-                elif key is "y":
+                elif key == "y":
                     self.y = kwargs["y"]
 
     def to_dictionary(self):

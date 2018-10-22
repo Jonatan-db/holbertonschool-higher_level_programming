@@ -48,10 +48,10 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         """ returns an instance with all attributes of the dict """
-        if cls.__name__ is "Rectangle":
-            temp = cls(6, 9)
-        if cls.__name__ is "Square":
-            temp = cls(6)
+        if cls.__name__ == "Rectangle":
+            temp = cls(width=6, height=9)
+        if cls.__name__ == "Square":
+            temp = cls(size=69)
         temp.update(**dictionary)
 
         return temp
@@ -63,11 +63,11 @@ class Base():
         try:
             with open("{}.json".format(
                     cls.__name__), "r", encoding='utf-8') as f:
-                temp = cls.from_json_string(f.read())
+                temp2 = cls.from_json_string(f.read())
         except:
             return []
-        for i in range(len(temp)):
-            temp[i] = cls.create(**temp[i])
+        for i in temp2:
+            temp.append(cls.create(**i))
         return temp
 
     @classmethod
