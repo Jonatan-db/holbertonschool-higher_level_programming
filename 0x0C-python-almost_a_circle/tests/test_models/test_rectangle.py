@@ -181,6 +181,57 @@ class Test_Rectangle(unittest.TestCase):
         self.assertTrue(isinstance(x, list))
         self.assertTrue(isinstance(x[0], Rectangle))
 
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+
+    def test_checker(self):
+        """ testing basic shit """
+        test1 = Rectangle(1, 2)
+        self.assertTrue(test1)
+        test2 = Rectangle(1, 2, 3)
+        self.assertTrue(test2)
+        test3 = Rectangle(1, 2, 3, 4)
+        self.assertTrue(test3)
+        with self.assertRaises(TypeError):
+            test4 = Rectangle("1", 2)
+            test5 = Rectangle(1, "2")
+            test6 = Rectangle(1, 2, "3")
+            test7 = Rectangle(1, 2, 3, "4")
+        with self.assertRaises(ValueError):
+            test8 = Rectangle(-1, 2)
+            test9 = Rectangle(1, -2)
+            test10 = Rectangle(0, 2)
+            test11 = Rectangle(1, 0)
+            test12 = Rectangle(1, 2, -3)
+            test13 = Rectangle(1, 2, 3, -4)
+
+    def test_display3(self):
+        """ wtf do i do for this method """
+        sys.stdout = StringIO()
+        test1 = Rectangle(2, 2)
+        test1.display()
+        self.assertEqual("##\n##\n", sys.stdout.getvalue())
+        sys.stdout = sys.__stdout__
+
+    def test_display4(self):
+        """ wtf do i do for this method """
+        sys.stdout = StringIO()
+        test1 = Rectangle(2, 2, 2)
+        test1.display()
+        self.assertEqual("  ##\n  ##\n", sys.stdout.getvalue())
+        sys.stdout = sys.__stdout__
+
 
 if __name__ == "__main__":
     unittest.main()
