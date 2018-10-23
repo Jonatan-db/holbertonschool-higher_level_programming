@@ -248,5 +248,21 @@ class Test_Square(unittest.TestCase):
         test2 = Square.save_to_file([])
         self.assertEqual(test2, None)
 
+    def test_sumin(self):
+        """ omg i have to test if it woprks """
+        Square.save_to_file(None)
+        with open("Rectangle.json", mode="r", encoding='utf-8') as f:
+            l = f.read()
+        l2 = "[]"
+        self.assertEqual(l, l2)
+
+    def test_sumin1(self):
+        """ omg i have to test if it woprks """
+        Square.save_to_file([])
+        with open("Rectangle.json", mode="r", encoding='utf-8') as f:
+            l = f.read()
+        l2 = '[]'
+        self.assertEqual(l, l2)
+
 if __name__ == "__main__":
     unittest.main()

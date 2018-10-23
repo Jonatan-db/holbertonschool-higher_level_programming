@@ -259,5 +259,14 @@ class Test_Rectangle(unittest.TestCase):
         l2 = "[]"
         self.assertEqual(l, l2)
 
+    def test_sumin1(self):
+        """ omg i have to test if it woprks """
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", mode="r", encoding='utf-8') as f:
+            l = f.read()
+        l2 = '[]'
+        self.assertEqual(l, l2)
+
+
 if __name__ == "__main__":
     unittest.main()
