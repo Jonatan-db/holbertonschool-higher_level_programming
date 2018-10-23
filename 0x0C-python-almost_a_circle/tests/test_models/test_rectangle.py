@@ -203,17 +203,28 @@ class Test_Rectangle(unittest.TestCase):
         self.assertTrue(test2)
         test3 = Rectangle(1, 2, 3, 4)
         self.assertTrue(test3)
-        with self.assertRaises(TypeError):
+
+    def test_checker2(self):
+        """testing the errors"""
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             test4 = Rectangle("1", 2)
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
             test5 = Rectangle(1, "2")
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             test6 = Rectangle(1, 2, "3")
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             test7 = Rectangle(1, 2, 3, "4")
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             test8 = Rectangle(-1, 2)
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             test9 = Rectangle(1, -2)
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             test10 = Rectangle(0, 2)
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             test11 = Rectangle(1, 0)
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             test12 = Rectangle(1, 2, -3)
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             test13 = Rectangle(1, 2, 3, -4)
 
     def test_display3(self):
