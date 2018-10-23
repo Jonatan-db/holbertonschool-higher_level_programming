@@ -247,8 +247,17 @@ class Test_Rectangle(unittest.TestCase):
         """ checks none for save to file error """
         test1 = Rectangle.save_to_file(None)
         self.assertEqual(test1, None)
+        self.assertFalse(test1)
         test2 = Rectangle.save_to_file([])
         self.assertEqual(test2, None)
+
+    def test_sumin(self):
+        """ omg i have to test if it woprks """
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", mode="r", encoding='utf-8') as f:
+            l = f.read()
+        l2 = "[]"
+        self.assertEqual(l, l2)
 
 if __name__ == "__main__":
     unittest.main()
