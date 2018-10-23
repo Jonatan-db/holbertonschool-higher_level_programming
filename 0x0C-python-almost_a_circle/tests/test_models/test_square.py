@@ -186,6 +186,67 @@ class Test_Square(unittest.TestCase):
         self.assertTrue(isinstance(x, list))
         self.assertTrue(isinstance(x[0], Square))
 
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+    """ POST CHECKER """
+
+    def test_checker(self):
+        """ testing basic shit """
+        test1 = Square(1)
+        self.assertTrue(test1)
+        test2 = Square(1, 2)
+        self.assertTrue(test2)
+        test3 = Square(1, 2, 3)
+        self.assertTrue(test3)
+
+    def test_checker2(self):
+        """testing the errors"""
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            test4 = Square("1", 2)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            test5 = Square(1, "2")
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            test6 = Square(1, 2, "3")
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            test8 = Square(-1)
+            test13 = Square(0)
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            test9 = Square(1, -2)
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            test12 = Square(1, 2, -3)
+
+    def test_display3(self):
+        """ wtf do i do for this method """
+        sys.stdout = StringIO()
+        test1 = Square(2)
+        test1.display()
+        self.assertEqual("##\n##\n", sys.stdout.getvalue())
+        sys.stdout = sys.__stdout__
+
+    def test_display4(self):
+        """ wtf do i do for this method """
+        sys.stdout = StringIO()
+        test1 = Square(2, 2)
+        test1.display()
+        self.assertEqual("  ##\n  ##\n", sys.stdout.getvalue())
+        sys.stdout = sys.__stdout__
+
+    def test_checker3(self):
+        """ checks none for save to file error """
+        test1 = Square.save_to_file(None)
+        self.assertEqual(test1, None)
+        test2 = Square.save_to_file([])
+        self.assertEqual(test2, None)
 
 if __name__ == "__main__":
     unittest.main()

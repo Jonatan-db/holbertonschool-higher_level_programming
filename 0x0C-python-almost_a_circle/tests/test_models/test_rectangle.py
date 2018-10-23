@@ -243,6 +243,12 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual("  ##\n  ##\n", sys.stdout.getvalue())
         sys.stdout = sys.__stdout__
 
+    def test_checker3(self):
+        """ checks none for save to file error """
+        test1 = Rectangle.save_to_file(None)
+        self.assertEqual(test1, None)
+        test2 = Rectangle.save_to_file([])
+        self.assertEqual(test2, None)
 
 if __name__ == "__main__":
     unittest.main()
