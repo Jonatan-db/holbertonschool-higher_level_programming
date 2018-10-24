@@ -138,7 +138,7 @@ class Test_Rectangle(unittest.TestCase):
         test1 = Rectangle(1, 1, 1, 1, 1)
         test1DIC = test1.to_dictionary()
         test1STR = test1.to_json_string(test1DIC)
-        self.assertTrue(test1STR, json.dumps(test1DIC))
+        self.assertEqual(test1STR, json.dumps(test1DIC))
 
     def test_save_to_file(self):
         """ tests if we saved to the file """
