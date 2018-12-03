@@ -1,3 +1,3 @@
 -- Write a script that lists the number of records with the same score in the table 
 -- find number of occurances
-SELECT score, count(*) 'number' from second_table GROUP BY score DESC
+SELECT score, COUNT(score) 'numbers' FROM second_table GROUP BY score ORDER BY COUNT(score) DESC;
