@@ -8,6 +8,6 @@ INSERT INTO second_table VALUES (1, "John", 10);
 -- inserts data into the table
 INSERT INTO second_table VALUES (2, "Alex", 3);
 -- inserts data into the table
-INSERT INTO second_table VALUES (3, "Bobn", 14);
+INSERT INTO second_table VALUES (3, "Bob", 14);
 -- inserts data into the table
 INSERT INTO second_table VALUES (4, "George", 8);
