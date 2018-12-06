@@ -2,6 +2,7 @@
 SELECT tv_genres.name
 FROM tv_genres
 WHERE tv_genres.name NOT IN (
+	-- sub query to find all genres that dexter matches with
 	SELECT tv_genres.name
 	FROM tv_shows
 	INNER JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
