@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" script that does stuff """
+
 
 def getAllStates(user2, passward2, db2):
     """ script that gets all the states when called on """
