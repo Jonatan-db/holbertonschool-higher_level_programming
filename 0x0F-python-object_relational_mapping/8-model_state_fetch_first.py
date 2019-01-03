@@ -12,13 +12,10 @@ def getAllStates(user2, passward2, db2):
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    counter = 0
-    for state in session.query(State).order_by(State.id).limit(1):
-        if counter is 1:
-            break
-        print("{}: {}".format(state.id, state.name))
-        counter = 1
-    if counter is 0:
+    pp = session.query(State).order_by(State.id).first()
+    if pp:
+        print("{}: {}".format(pp.id, pp.name))
+    else:
         print("Nothing")
     session.close()
 
