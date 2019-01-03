@@ -15,7 +15,7 @@ def getAllStates(user2, passward2, db2, uinput):
     cur.execute("""SELECT *
                 FROM states
                 WHERE name
-                LIKE '{}' ORDER BY id ASC""".format(uinput))
+                LIKE BINARY '{}' ORDER BY id ASC""".format(uinput))
     rows = cur.fetchall()
     for row in rows:
         print(row)
