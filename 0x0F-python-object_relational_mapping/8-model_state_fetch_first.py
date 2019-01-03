@@ -21,9 +21,6 @@ def getAllStates(user2, passward2, db2):
     if counter is 0:
         print("Nothing")
     session.close()
-    # engine = sqlalchemy.create_engine()
-    # db = MySQLdb.connect(host=MY_HOST, user=MY_USER, db=MY_DB)
-    # cur = db.cursor()
 
 if __name__ == "__main__":
     import sys
