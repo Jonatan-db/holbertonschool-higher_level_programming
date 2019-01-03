@@ -13,7 +13,7 @@ def getAllStates(user2, passward2, db2):
     Session = sessionmaker(bind=engine)
     session = Session()
     counter = 0
-    for state in session.query(State).order_by(State.id).all():
+    for state in session.query(State).order_by(State.id).limit(1):
         if counter is 1:
             break
         print("{}: {}".format(state.id, state.name))
