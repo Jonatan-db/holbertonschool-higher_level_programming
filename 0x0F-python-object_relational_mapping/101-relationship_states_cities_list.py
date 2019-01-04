@@ -13,10 +13,17 @@ def getAllCities(user2, passward2, db2):
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
 
+    """
     for each state
-    print state
-    for each city in state
-    print city
+        print state
+        for each city in state
+            print city
+    """
+
+    for state in session.query(State).order_by(State.id).all():
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("    {}: {}".format(city.id, city.name))
 
     session.close()
     # engine = sqlalchemy.create_engine()
