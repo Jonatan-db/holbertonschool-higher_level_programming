@@ -12,7 +12,7 @@ class State(Base):
 
     __tablename__ = 'states'
     id = Column('id', Integer, primary_key=True,
-            nullable=False, autoincrement=True)
+                nullable=False, autoincrement=True)
     name = Column('name', String(128), nullable=False)
     cities = relationship("City", backref=backref(
                           'states', cascade="all, delete"))

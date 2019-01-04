@@ -14,8 +14,8 @@ def getAllCities(user2, passward2, db2):
     session = sessionmaker(bind=engine)()
 
     for each state
-        for each city in state
-            print city
+    for each city in state
+    print city
 
     session.close()
     # engine = sqlalchemy.create_engine()

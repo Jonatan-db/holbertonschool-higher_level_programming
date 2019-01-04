@@ -11,10 +11,10 @@ def getAllCities(user2, passward2, db2):
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
                 user2, passward2, db2))
     Base.metadata.create_all(engine)
-    session = sessionmaker(bind=engine)()
+    session = sessionmaker(bind=engine)
 
     c1 = City(name="San Francisco")
-    s1 = State(name="California", cities = [c1])
+    s1 = State(name="California", cities=[c1])
 
     session.add(s1)
     session.add(c1)
