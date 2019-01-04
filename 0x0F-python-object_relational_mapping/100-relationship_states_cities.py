@@ -5,8 +5,8 @@ def getAllCities(user2, passward2, db2):
     """ script that gets all the states when called on """
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
-    from relationship_city import Base, City
-    from relationship_state import State
+    from relationship_city import City
+    from relationship_state import Base, State
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
                 user2, passward2, db2))
