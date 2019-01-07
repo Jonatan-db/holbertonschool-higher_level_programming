@@ -6,6 +6,13 @@
 
 </p>
 
+
+<p align="center">
+  
+  <img alt="MySQL" title="MySQL" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png" width="250">
+
+</p>
+
 ## Introduction
 
 
