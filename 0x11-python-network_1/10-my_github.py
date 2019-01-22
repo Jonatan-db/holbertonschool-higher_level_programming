@@ -12,5 +12,7 @@ if __name__ == "__main__":
                                   auth=(sys.argv[1], sys.argv[2])).json()
         if "id" in toothpaste:
             print(toothpaste["id"])
+        else:
+            print("None")
     except:
         print("None")
