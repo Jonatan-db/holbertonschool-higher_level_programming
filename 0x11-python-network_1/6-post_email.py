@@ -7,5 +7,5 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    poop = requests.post(sys.argv[1], data={'email':sys.argv[2]})
+    poop = requests.post(sys.argv[1], data={'email': sys.argv[2]})
     print(poop.text)

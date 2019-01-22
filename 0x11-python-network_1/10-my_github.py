@@ -9,7 +9,7 @@ import sys
 if __name__ == "__main__":
     try:
         toothpaste = requests.get('https://api.github.com/user',
-                               auth=(sys.argv[1], sys.argv[2])).json()
+                                  auth=(sys.argv[1], sys.argv[2])).json()
         if "id" in toothpaste:
             print(toothpaste["id"])
     except:

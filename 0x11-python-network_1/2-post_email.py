@@ -9,9 +9,9 @@ from urllib.parse import urlencode
 import sys
 
 if __name__ == "__main__":
-   email = {'email': sys.argv[2]}
-   email2 = urlencode(email)
-   email3 = email2.encode('utf-8')
+    email = {'email': sys.argv[2]}
+    email2 = urlencode(email)
+    email3 = email2.encode('utf-8')
 
-   with urlopen(sys.argv[1], email3) as r:
+    with urlopen(sys.argv[1], email3) as r:
         print(r.read().decode('utf-8'))
