@@ -1,11 +1,11 @@
 #!/usr/bin/node
 const request = require('request');
 request(process.argv[2], 'utf-8', function (error, response, body) {
+  let dict = {};
   if (error) {
     throw (error);
   } else {
     let data = JSON.parse(body);
-    let dict = {};
 
     for (let i = 0; i < data.length; i++) {
       let user = data[i];
@@ -16,6 +16,6 @@ request(process.argv[2], 'utf-8', function (error, response, body) {
         dict[user.userId]++;
       }
     }
-    console.log(dict);
   }
+  console.log(dict);
 });
