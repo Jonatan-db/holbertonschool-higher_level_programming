@@ -1,10 +1,9 @@
 #!/usr/bin/node
-
 const request = require('request');
-const fake = 'http://swapi.co/api/films/';
-let count = 0;
-let charId = /18/;
+const fake = process.argv[2];
 request(fake, function (error, response, body) {
+  let charId = /18/;
+  let count = 0;
   if (error) {
     console.log(error);
   } else {
