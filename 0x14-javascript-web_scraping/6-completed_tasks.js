@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-request(process.argv[2], function (error, response, body) {
+request(process.argv[2], 'utf-8', function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
@@ -9,7 +9,6 @@ request(process.argv[2], function (error, response, body) {
 
     for (let i = 0; i < data.length; i++) {
       let user = data[i];
-
       if (dict[user.userId] === undefined) {
         dict[user.userId] = 0;
       }
