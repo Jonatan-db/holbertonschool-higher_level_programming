@@ -1,3 +1,3 @@
-$("header").on('click', function() {
+$('header').on('click', function () {
   $(this).css('color', 'red');
 });
